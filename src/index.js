@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import SeasonDisplay from "./SeasonDisplay";
+import Loader from "./Loader"
+import "./SeasonDisplay.css";
 
 class App extends React.Component {
 
@@ -17,8 +19,7 @@ class App extends React.Component {
     );
   }
 
-  //defining render function
-  render() {
+  renderContent() {
     if (this.state.errorMessage && !this.state.lat) {
       return <div>Error: {this.state.errorMessage}</div>
     }
@@ -31,11 +32,16 @@ class App extends React.Component {
 
     if (!this.state.errorMessage && !this.state.lat) {
       return (
-        <div>
-          Loading, please hang on.
-        </div>
+        <Loader message="Attempting to load your location..."/>
       )
     }
+  }
+
+  //defining render function
+  render() {
+    return (
+      this.renderContent()
+    );
   }
 }
 
