@@ -14,9 +14,9 @@ To upload this project onto github pages.
 
 ## Getting Started
 
-You can click on the link (https://tingzhouu.github.io/seasons-react-classes).
+For an online version, you can click on the link (https://tingzhouu.github.io/seasons-react-classes).
 
-In the project directory, you can run:
+For an offline version, in the project directory, you can run:
 
 ### `npm start`
 
